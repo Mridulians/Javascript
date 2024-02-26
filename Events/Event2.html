@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mridul Gupta is best</h1>
+
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+   
+   console.log("mridul")
+
+  const changeText =  function sayMridul (){
+    document.querySelector('h1').innerHTML = "Mridul is the king"
+   }
+//    function sayMridul1 (){
+//     document.querySelector('h1').innerHTML = "Mridul is the briliant"
+//    }
+//    function sayMridul2 (){
+//     document.querySelector('h1').innerHTML = "Mridul is the everything"
+//    }
+//    function sayMridul3 (){
+//     document.querySelector('h1').innerHTML = "Mridul is the genius"
+//    }
+
+ const times = setTimeout(changeText , 2000);
+//  setTimeout(sayMridul1 , 3000);
+//  setTimeout(sayMridul2 , 4000);
+//  setTimeout(sayMridul3 , 5000);
+
+document.querySelector('#stop').addEventListener(('click') , ()=>{
+
+    clearTimeout (times) // it stopped the setTimeout function to get executed.
+    console.log("STOPPED")
+})
+
+</script>
+</html>
