@@ -74,13 +74,51 @@ const MridulData = {
 
 //  OBJECT DESTRUCTURING IN JS
 
- const google = {
-    name:'Mrdidul',
-    instructor:'Mridulians',
-    instructorName:'Jo bhi ho'
- }                
+//  const google = {
+//     name:'Mridul',
+//     instructor:'Mridulians',
+//     instructorName:'Jo bhi ho'
+//  }                
 
- const {instructorName : aisi} = google
+//  const {instructorName , name , age=21} = google
+// console.log(google)
+//  console.log(instructorName , name , age)
 
- console.log(google.instructorName)
- console.log(aisi)
+
+// const mySelf = {
+//     firstName:"Mridul",
+//     lastName : "Gupta",
+//     age:21,
+// }
+
+// const {firstName , lastName ,  fullName = `${firstName} ${lastName}`} = mySelf
+
+// console.log(fullName)
+
+
+// NESTED  OBJECTS DESTRUCTURING ===============================================================================================
+
+const user = { 
+    'name': 'Alex',
+    'address': '15th Park Avenue',
+    'age': 43,
+    'department':{
+        'name': 'Sales',
+        'Shift': 'Morning',
+        'address': {
+            'city': 'Bangalore',
+            'street': '7th Residency Rd',
+            'zip': 560001
+        }
+    }
+}
+
+const {department : {address : {zip , city , street}}} = user; // this is known as nesting object destructuring.
+
+// console.log(department) // gives complete info about department
+
+// console.log(address) // gives info about address in department object
+
+console.log(street)
+console.log(zip)
+console.log(city)
